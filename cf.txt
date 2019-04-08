@@ -1,0 +1,25 @@
+1.) http
+
+right click on host.. apply as column
+
+now click on that host and right click and follow TCP stream
+
+2.) frame matches"(?)cell"
+
+3.) frame matches"(?)zillow"
+
+4.) http.server contains "Apache"
+
+5.) Statistics > Endpoints
+
+Monitor Live Processes (Tool: ProcMon)
+
+Capture RAM (Tool: RAMCapture)
+
+Capture TCP/UDP packets (Tool: TcpView)
+
+Monitor Hard Disk (Tool: DiskMon)
+
+Monitor Virtual Memory (Tool: VMMap)
+
+Monitor Cache Memory (Tool: RAMMap
