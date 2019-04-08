@@ -1,0 +1,30 @@
+1. sudo grep -c "svm\|vmx" /proc/cpuinfo
+2. sudo apt-get update
+3. sudo apt-get install qemu-kvm libvirt-bin bridge-utils virt-manager
+4. sudo adduser naveen
+6. sudo addgroup libvirtd
+7. sudo adduser naveen libvirtd
+8. sudo virsh -c qemu:///system list
+9. sudo virt-manager  - open virtual machine
+10. create new virtual machine
+11. select os iso file location
+12. follow other steps as normal installation. 
+
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+<title>W3Schools Home Page</title>
+<link>https://www.w3schools.com</link>
+<description>Free web building tutorials</description>
+<item>
+<title>RSS Tutorial</title>
+<link>https://www.w3schools.com/xml/xml_rss.asp</link>
+<description>New RSS tutorial on W3Schools</description>
+</item>
+-<item>
+<title>XML Tutorial</title>
+<link>https://www.w3schools.com/xml</link>
+<description>New XML tutorial on W3Schools</description>
+</item>
+</channel>
+</rss>
