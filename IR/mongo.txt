@@ -1,0 +1,92 @@
+1.MongoDB Create database
+>show dbs
+>use student
+
+2.MongoDB Drop Database
+>use student
+>db.dropDatabase()
+>show dbs
+
+3.MongoDB Create collection
+>db.createCollection("student")
+
+*To display collections->show collections
+
+4.MongoDB Drop collection
+>db.student.drop()
+>show collections
+
+5.MongoDB Insert Document
+>db.student.insert({roll:1,name:"Dipen",city:"Mumbai"})
+
+*To display inserted data->db.student.find()
+
+6.MongoDB Update Document
+>db.student.update({name:"Dipen"},{$set:{name:"dipu"}})
+
+7.Delete document in MongoDB
+>db.student.remove({roll:1})
+
+
+
+=====================================================
+
+mongo db commands
+
+1. Create database india
+
+use india
+
+
+2. Create collection Candidates
+
+db.candidates.insert({"name":"ABC","party":"BJP","area":"kurla","state":"maharashtra","education":"BA","wealth":50,"oldvotes":[{"2004":235232,"2009":325689,"2014":5012346}]})
+
+
+db.candidates.insert({"name":"XYZ","party":"Congress","area":"wadala","state":"maharashtra","education":"BSC","wealth":100,"oldvotes":[{"2004":320000,"2009":650000,"2014":200000}]})
+
+
+ db.candidates.insert({"name":"LMN","party":"Shiv Sena","area":"dadar","state":"maharashtra","education":"MSC","wealth":80,"oldvotes":[{"2004":80000,"2009":360000,"2014":800000}]})
+
+
+db.candidates.insert({"name":"PQR","party":"BSP","area":"virar","state":"maharashtra","education":"HM","wealth":40,"oldvotes":[{"2004":8000,"2009":130000,"2014":200000}]})
+
+
+db.candidates.insert({"name":"RST","party":"Manse","area":"thane","state":"maharashtra","education":"BCOM","wealth":70,"oldvotes":[{"2004":5000,"2009":13000,"2014":120000}]})
+
+db.candidates.find().pretty()
+
+
+3. Display the list of candidates with party BJP or Shivsena 
+
+db.candidates.find({"$or": [{"party":"BJP"}, {"party":"Shivsena"}] });
+
+4. Update the area of <<candidate name>> from ... to "Chembur"
+
+db.candidates.update({"name":"ABC"},{$set:{"area":"sion"}})
+
+
+5. Remove the document of a candidate whose
+name is <<>>
+
+
+db.candidates.remove({"name":"RST"})
+
+
+6. Display the name & education of candidates
+of party <<>>
+
+db.candidates.find({"party":"BJP"},{"name":1,"education":1});
+
+
+7. Display the list of candidates in decreasing order of wealth and increasing order of party name
+
+db.candidates.find().sort({"wealth":-1,"party":1});
+
+8. Display the sum of the votes of all years for each candidate
+
+
+
+
+9. Find the sum of wealth of all candidates party wise. 
+10. Create a collection called Awards containing candidate name as key and awards as data value.  Merge the Candidates and Awards collection based on Name
